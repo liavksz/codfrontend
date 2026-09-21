@@ -146,10 +146,27 @@ alert(
 "Refrigerante: " + refri + " L"
 )
 }
+function jares(){
+let caminhoes = Number(prompt("Digite o número de caminhões:"));
+let totalJares = caminhoes * 50;
+let receita = totalJares * 90;
+let custo = caminhoes * 450;
+let lucro = receita - custo;
+alert('O lucro foi de '+lucro+' reais.')
+}
+function tokens(){
+let caracteres = Number(prompt("Digite o número de caracteres do prompt:"));
+let custoToken = Number(prompt("Digite o preço de 1 token em reais:"));
+let totalTokens = 5 + caracteres;
+let custoTotal = totalTokens * custoToken;
+alert("Tokens gastos: " + totalTokens + "\nCusto total: R$ " + custoTotal.toFixed(2));
+}
+function freelancer(){
 
+}
+function relatorio(){
 
-
-
+}
 
   return (
     <div className="cont-app">
@@ -179,6 +196,10 @@ alert(
   <button onClick={romero}>Obras do Romero</button>
   <button onClick={bernardo}>Ração</button>
   <button onClick={calcular}>Calcular açougue</button>
+  <button onClick={jares}>Calcular jarés</button>
+  <button onClick={tokens}>Tokens</button>
+  <button onClick={freelancer}>Freelancer</button>
+  <button onClick={relatorio}>Relatório</button>
     </div>
   )
 }
