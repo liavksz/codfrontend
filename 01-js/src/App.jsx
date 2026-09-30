@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [resultado, setResultado] = useState(0);
+
   // bloco A
 
   function testar() {
@@ -241,6 +244,11 @@ function App() {
         " horas",
     );
   }
+  function calcularDobro() {
+    let numero = Number(prompt("Digite o número:"));
+    let dobro = numero * 2;
+    setResultado(dobro);
+  }
 
   return (
     <div className="cont-app">
@@ -274,6 +282,12 @@ function App() {
       <button onClick={tokens}>Tokens</button>
       <button onClick={calcularFreela}>Freela</button>
       <button onClick={calcularRelatorios}>Relatório</button>
+      <hr />
+      <h1>Usando estados</h1>
+      <hr />
+      <h2>Aula 4</h2>
+      <button onClick={calcularDobro}>Estados - dobro</button>
+      <p>Resultado da operação: {resultado}</p>
     </div>
   );
 }
