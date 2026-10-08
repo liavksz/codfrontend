@@ -22,7 +22,7 @@ function Pousada() {
   }
 
   return (
-    <div>
+    <div className="Pousada">
       <h2>Pousada</h2>
       <button onClick={juca}>Calcular</button>
 
