@@ -4,6 +4,8 @@ import Pousada from "./components/Pousada";
 import Voto from "./components/Voto";
 import Pesoo from "./components/Pesoo";
 import Macas from "./components/Macas";
+import Capitao from "./components/Capitao";
+import Recrutamento from "./components/Recrutamento";
 
 function App() {
   return (
@@ -17,6 +19,12 @@ function App() {
       <Pesoo />
       <hr />
       <Macas />
+      <hr />
+      <h1>#030</h1>
+      <hr />
+      <Capitao />
+      <hr />
+      <Recrutamento />
     </div>
   );
 }
