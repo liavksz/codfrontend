@@ -6,6 +6,12 @@ import "./App.css";
 import Home from "./pages/Home";
 import Demo from "./pages/Demo";
 import Pneu from "./pages/Pneu";
+import Ho from "./pages/Ho";
+import Media from "./pages/Media";
+import Bondinho from "./pages/Bondinho";
+import Pum from "./pages/Pum";
+import Posto from "./pages/Posto";
+import Lesmas from "./pages/Lesmas";
 
 function App() {
   return (
@@ -13,6 +19,12 @@ function App() {
       <Home />
       <Demo />
       <Pneu />
+      <Ho />
+      <Media />
+      <Bondinho />
+      <Pum />
+      <Posto />
+      <Lesmas />
     </div>
   );
 }

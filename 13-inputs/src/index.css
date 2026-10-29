@@ -1,7 +1,9 @@
 .app,
 .home,
 .demo,
-.pneu {
+.pneu,
+.Ho,
+.media {
   display: flex;
   flex-direction: column;
   justify-content: center;

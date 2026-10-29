@@ -1,37 +1,43 @@
 import React, { useState } from "react";
 
-function Demo() {
-  const [inputNota1, setInputNota1] = useState("");
-  const [inputNota2, setInputNota2] = useState("");
+function Bondinho() {
+  const [inputAlunos, setInputAlunos] = useState("");
+  const [inputMonitores, setInputMonitores] = useState("");
   const [resultado, setResultado] = useState(
-    "Digite suas notas e aperte o botão",
+    "Digite as quantidades e aperte o botão",
   );
 
-  function calcularMedia() {
-    let nota1 = Number(inputNota1);
-    let nota2 = Number(inputNota2);
-    let media = (nota1 + nota2) / 2;
-    setResultado(media);
+  function calcular() {
+    let alunos = Number(inputAlunos);
+    let monitores = Number(inputMonitores);
+    let total = alunos + monitores;
+
+    if (total <= 50) {
+      setResultado("S");
+    } else {
+      setResultado("N");
+    }
   }
+
   return (
     <div className="demo">
-      <h1>Demo - médias</h1>
-      <label htmlFor="">Nota 1 </label>
+      <h1>Bondinho</h1>
+      <label htmlFor="">Alunos (A) </label>
       <input
         type="text"
-        value={inputNota1}
-        onChange={(e) => setInputNota1(e.target.value)}
+        value={inputAlunos}
+        onChange={(e) => setInputAlunos(e.target.value)}
       />
-      <label htmlFor="">Nota 2 </label>
+      <label htmlFor="">Monitores (M) </label>
       <input
         type="text"
-        value={inputNota2}
-        onChange={(e) => setInputNota2(e.target.value)}
+        value={inputMonitores}
+        onChange={(e) => setInputMonitores(e.target.value)}
       />
-      <button onClick={calcularMedia}>Calcular</button>
+      <button onClick={calcular}>Calcular</button>
       <p>{resultado}</p>
     </div>
   );
 }
 
-export default Demo;
+export default Bondinho;
